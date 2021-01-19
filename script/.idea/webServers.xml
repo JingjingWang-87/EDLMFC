@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="d1abc50a-4ee5-477d-902e-45b2e187196e" name="172.19.4.31">
+        <fileTransfer rootFolder="/root" accessType="SFTP" host="172.19.4.197" port="22" sshConfigId="53d32175-10bf-4bc7-8a2d-b91218a3f724" sshConfig="wangjingjing@172.19.4.197:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="465d848c-7e88-4bfa-a59c-3e30cfcccc75" name="197jing">
+        <fileTransfer rootFolder="/home/wangjingjing/RPITERA_script197" accessType="SFTP" host="172.19.4.197" port="22" sshConfigId="53d32175-10bf-4bc7-8a2d-b91218a3f724" sshConfig="wangjingjing@172.19.4.197:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
