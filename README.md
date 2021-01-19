@@ -6,7 +6,7 @@ The depended python packages are listed in _requirements.txt_. The package versi
 
 ## How to run
 
-The program is in Python 3.6 using [Keras](https://keras.io/) and [Tensorflow](https://www.tensorflow.org/) backends. Use the below bash command to run EDLMFC.
+The program is in Python 3.6.5 using [Keras](https://keras.io/) and [Tensorflow](https://www.tensorflow.org/) backends. Use the below bash command to run EDLMFC.
 
 ```bash
     python main.py -d dataset
@@ -21,13 +21,13 @@ The widely used RPI benchmark datasets are organized in the _data_ directory.
 
 Due to the limitation of the hardware conditions of the selected RNA secondary structure method, it can only predict the secondary structure of RNA with a length of no more than 500 nucleotides, so we preprocessed the data.
 
-                       Dataset    | #Positive pairs | #Negative pairs | RNAs | Proteins |Reference
+                 Dataset    | #Positive pairs | #Negative pairs  |  RNAs  | Proteins | Reference
 -------------|--------------|-----------------|------------------|--------|----------|------------
-Original set     RPI1807             1807                  1436            1078       3131        [1]
-                    NPInter v2.0        10412                10412           4636        449         [2]
+Original set    RPI1807             1807              1436          1078      3131        [1]
+                NPInter v2.0        10412             10412         4636      449         [2]
 -------------|--------------|-----------------|------------------|--------|----------|-------------
-Optimal set     RPI1807              652                    221              646        868         [1]
-                    NPInter v2.0|        1943                   1943            513        448          [2]
+Optimal set     RPI1807             652               221           646       868         [1]
+                NPInter v2.0|       1943              1943          513       448         [2]
  
 ## Help
 
