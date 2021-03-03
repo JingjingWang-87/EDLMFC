@@ -22,7 +22,6 @@ The widely used RPI benchmark datasets are organized in the _data_ directory.
 Due to the limitation of the hardware conditions of the selected RNA secondary structure method, it can only predict the secondary structure of RNA with a length of no more than 500 nucleotides, so we preprocessed the data.
 
                    Dataset    |  #Positive pairs  |  #Negative pairs  |  RNAs  |  Proteins  |Reference
----------------|--------------|-------------------|-------------------|--------|------------|----------
 
 Original set    
 
@@ -31,7 +30,6 @@ Original set
                  NPInter v2.0        10412             10412            4636       449         [2] 
                  
                  RPI488              243                245             25         247         [1]
----------------|--------------|-------------------|-------------------|--------|------------|----------
 
 Optimal set      
 
