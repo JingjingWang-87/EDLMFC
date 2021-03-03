@@ -22,7 +22,7 @@ from utils.sequence_encoder import ProEncoder, RNAEncoder
 
 
 # default program settings
-DATA_SET = 'RPI1807'
+DATA_SET = 'RPI488'
 TIME_FORMAT = "-%y-%m-%d-%H-%M-%S"
 
 WINDOW_P_UPLIMIT = 3 #联体
@@ -58,9 +58,9 @@ INI_PATH = script_dir + '/utils/data_set_settings.ini'
 metrics_whole = {'Conjoint-Struct-CNN-BLSTM': np.zeros(7)}
 
 ### plot ROC
-# # f = open(parent_dir + '/result/RPI1807_structure_auc.csv','w',encoding='utf-8')
-# # csv_writer = csv.writer(f)
-# csv_writer.writerow(["tpr","fpr"])
+#f = open(parent_dir + '/result/RPI488/sample3_structure+third structure.csv','w',encoding='utf-8')
+#csv_writer = csv.writer(f)
+#csv_writer.writerow(["tpr","fpr"])
 
 parser = ArgumentParser()
 parser.add_argument('-d', '--dataset', type=str, help='The dataset you want to process.')
@@ -150,7 +150,7 @@ def calc_metrics(y_label, y_proba):
         MCC = (TP * TN - FP * FN) / tmp
     fpr, tpr, thresholds = roc_curve(y_label, y_proba)
     AUC = auc(fpr, tpr)
-    # csv_writer.writerow([tpr,fpr])
+    #csv_writer.writerow([tpr,fpr])
     return Acc, Sn, Sp, Pre, F1_measure, MCC, AUC
 
 
@@ -160,7 +160,7 @@ def load_data(data_set):
     pro_structs = read_data_seq(DATA_BASE_PATH + "structure/" + data_set + '_protein_struct.fa')
     rna_structs = read_data_seq(DATA_BASE_PATH + "structure/" + data_set + '_rna_struct.fa')
     pos_pairs, neg_pairs = read_data_pair(DATA_BASE_PATH + data_set + '_pairs.txt')
-    features = read_feature(DATA_BASE_PATH + data_set + '_structure.txt')
+    features = read_feature(DATA_BASE_PATH + data_set + '_tertiary_structure.txt')
 
     return pos_pairs, neg_pairs, pro_seqs, rna_seqs, pro_structs, rna_structs,features
 
@@ -170,7 +170,7 @@ def coding_pairs(pairs, pro_seqs, rna_seqs, pro_structs, rna_structs, features, 
     if kind == 1:
         i = 0
     else:
-        i = 651
+        i = 42
     for pr in pairs:
         if pr[0] in pro_seqs and pr[1] in rna_seqs and pr[0] in pro_structs and pr[1] in rna_structs:
             feature_list = []
@@ -309,7 +309,7 @@ def control_model_trainable(model, trainable):
         layer.trainable = trainable
 
 # load data settings
-if DATA_SET in ['RPI1807', 'NPInter']:
+if DATA_SET in ['RPI1807', 'NPInter', 'RPI488']:
     config = configparser.ConfigParser()
     config.read(INI_PATH)
     WINDOW_P_UPLIMIT = config.getint(DATA_SET, 'WINDOW_P_UPLIMIT')

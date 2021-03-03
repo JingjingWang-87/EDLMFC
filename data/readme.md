@@ -1,6 +1,6 @@
 ### (Non)-Interaction pairs
 
-Let *XXX* be a dataset name, i. e.  *RPI1807* or *NPInter*.
+Let *XXX* be a dataset name, i. e.  *RPI488*,  *RPI1807* or *NPInter*.
 In *XXX_pairs.txt*, each line means an (non)-interactive protein RNA pair.
 
 ```
