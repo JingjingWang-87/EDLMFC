@@ -35,8 +35,7 @@ Original set     RPI1807             1807                  1436            1078 
 
 Optimal set     RPI1807              652                    221              646        868         [1]
 
-                NPInter v2.0|        1943                   1943            513        448          [2]
-                
+                NPInter v2.0|        1943                   1943            513        448          [2]             
                 RPI488                43                    233             13          155         [1]
 ## Help
 
