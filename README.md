@@ -23,6 +23,7 @@ Due to the limitation of the hardware conditions of the selected RNA secondary s
 
                        Dataset    | #Positive pairs | #Negative pairs | RNAs | Proteins |Reference
 -------------|--------------|-----------------|------------------|--------|----------|------------
+
 Original set    
 
                  RPI1807             1807                  1436            1078       3131        [1]
@@ -31,6 +32,7 @@ Original set
                  
                  RPI488              243                   245             25         247         [1]
 -------------|--------------|-----------------|------------------|--------|----------|-------------
+
 Optimal set      
 
                 RPI1807              652                    221              646        868         [1]
